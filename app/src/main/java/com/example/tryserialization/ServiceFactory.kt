@@ -11,7 +11,7 @@ object ServiceFactory {
 
     fun getService(): Service {
         return Retrofit.Builder()
-            .baseUrl("http://google.com")
+            .baseUrl("http://localhost/")
             .addConverterFactory(Json.asConverterFactory(MediaType.get(contentType)))
             .build()
             .create(Service::class.java)
